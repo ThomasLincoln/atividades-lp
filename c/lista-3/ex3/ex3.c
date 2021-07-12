@@ -16,8 +16,8 @@ main()
         for (k = 0; k < 4; k++)
         {
             printf("Insira um numero para matriz2, linha %i e coluna %i: ", i, k);
-            scanf("%f", &matriz1[i][k]);
-            soma = soma + matriz1[i][k];
+            scanf("%f", &matriz2[i][k]);
+            soma = soma + matriz2[i][k];
         }
     }
     printf("\n%f", soma);
