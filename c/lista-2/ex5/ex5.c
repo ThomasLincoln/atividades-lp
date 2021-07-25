@@ -3,30 +3,19 @@
 
 int main(void)
 {
-    float lado1, lado2, lado3;
-    printf("Informe um dos lados:\n");
-    scanf("%f", &lado1);
-    printf("Informe um dos lados:\n");
-    scanf("%f", &lado2);
-    printf("Informe um dos lados:\n");
-    scanf("%f", &lado3);
-    if ((fabs(lado2 - lado3)<lado1 && lado1 < (lado2 + lado3)) && (fabs(lado1 - lado3) < lado2 && lado2 < (lado1 + lado3)) && (fabs(lado1 - lado2) < lado3 && lado3 < (lado1 + lado2)))
-    {
-        if (lado1 == lado2 && lado2 == lado3)
-        {
-            printf("O triangulo e Equilatero\n");
-        }
-        else if ((lado1 != lado2) && (lado1 != lado3) && (lado2 != lado3))
-        {
-            printf("O triangulo e Escaleno\n");
-        }
-        else
-        {
-            printf("O triangulo e Isosceles\n");
-        }
-    }else{
-        printf("Nao e um triangulo\n");
-    }
+    int xa, ya, xb, yb;
+    float distancia;
+    printf("Distancia entre dois pontos\n");
+    printf("Digite o Xa: ");
+    scanf("%i", &xa);
+    printf("Digite o Ya: ");
+    scanf("%i", &ya);
+    printf("Digite o Xb: ");
+    scanf("%i", &xb);
+    printf("Digite o Yb: ");
+    scanf("%i", &yb);
+    distancia = sqrt(pow(xb - xa, 2) + pow(yb - ya, 2)); 
+    printf("%f\n", distancia);
     system("pause");
     return 0;
 }

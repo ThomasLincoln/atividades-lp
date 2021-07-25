@@ -1,24 +1,32 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
-  /*Faça um programa que leia um string e faça com que a primeira letra de cada palavra fique em maiúscula. Para isso, basta subtrair 32 do elemento que deseja alterar para maiúsculo
-  chrNome[0] = chrNome[0] – 32;
-  Ex. Entrada: lab. de linguagem de programação Ex. Saída : Lab. De Linguagem De Programação */
+int main(void)
+{
+    /*Uma imagem em RGB pode ser representada por uma matriz tridimensional, sendo
+que cada dimensão guarda os valores das intensidades de Vermelho, Verde e Azul para
+cada pixel. Declare a matriz para armazenar uma imagem RGB de 128 x 128 pixels.*/
+    char matriz[128][128][7];
+    int i, j;
+    char value[7];
 
-int main(void) {
-  int i;
-  char nome[100] = "0";
-
-  printf("Informe a frase sem letras maiusculas:\n ");
-  fgets(nome, 100, stdin);
-  if(nome[0] != ' '){
-    nome[0] = nome[0] - 32;
-  }
-  for(i = 0; i < strlen(nome);i++){
-    if(nome[i] == ' ' && nome[i+1] != ' '){
-      nome[i+1] = nome[i+1] -32;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("Insira na matriz[%d][%d]: ", i, j);
+            scanf(" %s", matriz[i][j]); 
+        }
     }
-  }
-  printf("\n %s", nome);
-  return 0;
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("[%i][%i] = %s \n",i, j, matriz[i][j]);
+        }
+    }
+
+   // printf("Matrix[1][2]: %d\n", matriz[1][2]);
+    return 0;
 }

@@ -1,29 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-main()
-{
-    int a, c, ni;
-    float b;
-    printf("Digite o numero inicial: ");
-    scanf("%d", &ni);
-    printf("Digite o numero final: ");
-    scanf("%d", &a);
-    if (a > ni)
-    {
-        while (a != ni)
-        {
-            b = sqrt(a);
-            c = b;
-            if (b <= c)
-            {
-                printf("o numero %d tem raiz quadrada perfeita \n", a);
-            }
-            a--;
-        }
-    }else{
-        printf("nao e possivel");
-    }
+
+int main(void){
+    float tempo, capital, taxaJuros, montante, juros;
+    printf("Cálculo de juros compostos");
+    printf("\n Informe o tempo em anos: ");
+    scanf("%f", &tempo);
+    printf("\n Informe o capital inicial: ");
+    scanf("%f", &capital);
+    printf("\n Informe a taxa de juros em numero decimal: ");
+    scanf("%f", &taxaJuros);
+    montante = capital* pow((1 + taxaJuros), tempo);
+    juros = montante - capital;
+    printf("\n juros: %f \n", juros);
     system("pause");
     return 0;
 }
