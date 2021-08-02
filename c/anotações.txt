@@ -1,0 +1,6 @@
+Enfim
+Malloc aloca uma memória, sendo possível escolher o tamanho da memória e ele retorna um ponteiro 
+para o local onde houve a alocação
+
+o Calloc faz o msm, só q ele zera tudo
+ele não é muito usado por ser mais lento
